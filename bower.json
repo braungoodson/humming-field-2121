@@ -1,0 +1,29 @@
+{
+  "name": "humming-field-2121",
+  "version": "0.2.0",
+  "homepage": "https://github.com/braungoodson/humming-field-2121",
+  "description": "twitter, jquery",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "twitter",
+    "jquery",
+    "rad",
+    "mvc",
+    "web",
+    "app"
+  ],
+  "authors": [
+    "braun goodson <braungoodson>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

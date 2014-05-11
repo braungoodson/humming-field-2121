@@ -1,0 +1,23 @@
+{
+  "name": "humming-field-2121",
+  "version": "0.1.0",
+  "description": "mustache-express, express, node",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/braungoodson/humming-field-2121"
+  },
+  "keywords": [
+    "mustache-express",
+    "express",
+    "application"
+  ],
+  "author": "braun goodson <braungoodson>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/braungoodson/humming-field-2121/issues"
+  }
+}

@@ -1,6 +1,32 @@
 <!doctype html>
 <html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>{{ tenant.title }}</title>
+  <meta name="description" content="{{ tenant.description }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/bower_components/twitter/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/bower_components/twitter/dist/css/bootstrap-theme.min.css" />
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
+</head>
 <body>
-  {{message}}
+  <div class="container">
+    <h1>{{ tenant.title }}</h1>
+    {{ #posts }}
+      <div class="media">
+        <a class="pull-left" href="#">
+          <img class="media-object" data-src="{{ tenant.image.dataSrc }}" alt="64x64" src="{{ tenant.image.src }}" style="width: 64px; height: 64px;">
+        </a>
+        <div class="media-body">
+          <h4 class="media-heading">{{ subject }}</h4>
+            {{ body }}
+        </div>
+      </div>
+    {{ /posts }}
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/twitter/dist/js/bootstrap.min.js"></script>
+  </div>
 </body>
 </html>

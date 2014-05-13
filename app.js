@@ -1,8 +1,8 @@
 var express = require('express'),
+  mustacheExpress = require('mustache-express'),
+  port = process.env.PORT || 30000,
   app = express(),
   assetsRoot = __dirname + '/assets',
-  mustacheExpress = require('mustache-express'),
-  fs = require('fs'),
   templatesRoot = __dirname + '/templates',
   bowerRoot = __dirname + '/bower_components';
 
@@ -23,17 +23,33 @@ app.get('/', function (q,r) {
       }
     },
     posts: [{
-      subject: 'What is Lorem Ipsum?',
-      body: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
+      subject: 'Guess what? I developed something!',
+      body: 'I want this thing to be some sweet SaaS and it is certianly on its way. It is written primarily in JavaScript. The back-end runs a node process leveraging a restful framework called express that integrates nicely with the mustache engine for logicless views whose models are nearly seemlessly hydrated from a local datastore. It also leverages bower, a front-end package manager, to install dependencies like twitter and jquery.'
     },{
-      subject: 'What is Lorem Ipsum?',
-      body: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
+      subject: 'Guess what? I developed something!',
+      body: 'I want this thing to be some sweet SaaS and it is certianly on its way. It is written primarily in JavaScript. The back-end runs a node process leveraging a restful framework called express that integrates nicely with the mustache engine for logicless views whose models are nearly seemlessly hydrated from a local datastore. It also leverages bower, a front-end package manager, to install dependencies like twitter and jquery.'
     },{
-      subject: 'What is Lorem Ipsum?',
-      body: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
+      subject: 'Guess what? I developed something!',
+      body: 'I want this thing to be some sweet SaaS and it is certianly on its way. It is written primarily in JavaScript. The back-end runs a node process leveraging a restful framework called express that integrates nicely with the mustache engine for logicless views whose models are nearly seemlessly hydrated from a local datastore. It also leverages bower, a front-end package manager, to install dependencies like twitter and jquery.'
+    },{
+      subject: 'Guess what? I developed something!',
+      body: 'I want this thing to be some sweet SaaS and it is certianly on its way. It is written primarily in JavaScript. The back-end runs a node process leveraging a restful framework called express that integrates nicely with the mustache engine for logicless views whose models are nearly seemlessly hydrated from a local datastore. It also leverages bower, a front-end package manager, to install dependencies like twitter and jquery.'
+    },{
+      subject: 'Guess what? I developed something!',
+      body: 'I want this thing to be some sweet SaaS and it is certianly on its way. It is written primarily in JavaScript. The back-end runs a node process leveraging a restful framework called express that integrates nicely with the mustache engine for logicless views whose models are nearly seemlessly hydrated from a local datastore. It also leverages bower, a front-end package manager, to install dependencies like twitter and jquery.'
+    },{
+      subject: 'Guess what? I developed something!',
+      body: 'I want this thing to be some sweet SaaS and it is certianly on its way. It is written primarily in JavaScript. The back-end runs a node process leveraging a restful framework called express that integrates nicely with the mustache engine for logicless views whose models are nearly seemlessly hydrated from a local datastore. It also leverages bower, a front-end package manager, to install dependencies like twitter and jquery.'
+    },{
+      subject: 'Guess what? I developed something!',
+      body: 'I want this thing to be some sweet SaaS and it is certianly on its way. It is written primarily in JavaScript. The back-end runs a node process leveraging a restful framework called express that integrates nicely with the mustache engine for logicless views whose models are nearly seemlessly hydrated from a local datastore. It also leverages bower, a front-end package manager, to install dependencies like twitter and jquery.'
+    },{
+      subject: 'Guess what? I developed something!',
+      body: 'I want this thing to be some sweet SaaS and it is certianly on its way. It is written primarily in JavaScript. The back-end runs a node process leveraging a restful framework called express that integrates nicely with the mustache engine for logicless views whose models are nearly seemlessly hydrated from a local datastore. It also leverages bower, a front-end package manager, to install dependencies like twitter and jquery.'
     }]
   };
   r.render('index.mustache',viewModel);
 });
 
-app.listen(process.env.PORT||30000);
+app.listen(port);
+console.log('http://localhost:'+port+'/');

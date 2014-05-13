@@ -1,8 +1,8 @@
 var express = require('express'),
+  mustacheExpress = require('mustache-express'),
+  port = process.env.PORT || 30000,
   app = express(),
   assetsRoot = __dirname + '/assets',
-  mustacheExpress = require('mustache-express'),
-  fs = require('fs'),
   templatesRoot = __dirname + '/templates',
   bowerRoot = __dirname + '/bower_components';
 
@@ -51,4 +51,5 @@ app.get('/', function (q,r) {
   r.render('index.mustache',viewModel);
 });
 
-app.listen(process.env.PORT||30000);
+app.listen(port);
+console.log('http://localhost:'+port+'/');
